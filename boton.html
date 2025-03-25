@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Muy Fácil</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #boton {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haz clic en el botón</h1>
+    <p>Puntos: <span id="puntos">0</span></p>
+    <button id="boton">Haz clic</button>
+    
+    <script>
+        let puntos = 0;
+        let boton = document.getElementById("boton");
+        let puntosSpan = document.getElementById("puntos");
+        
+        boton.addEventListener("click", function() {
+            puntos++;
+            puntosSpan.textContent = puntos;
+        });
+    </script>
+</body>
+</html>
